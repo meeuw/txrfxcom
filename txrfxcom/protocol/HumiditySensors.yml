@@ -1,0 +1,18 @@
+value: 0x51
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - humidity
+    - eHumstatus
+    - signalbattery
+enums:
+    eSubtype:
+        "LaCrosse TX3": 0x01
+        "LaCrosse WS2300": 0x02
+    eHumstatus:
+        "Dry": 0x00
+        "Comfort": 0x01
+        "Normal": 0x02
+        "Wet": 0x03

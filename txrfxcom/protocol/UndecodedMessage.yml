@@ -1,0 +1,26 @@
+value: 0x03
+enums:
+    eSubtype:
+        AC: 0x00
+        ARC: 0x01
+        ATI: 0x02
+        Hideki: 0x03
+        LaCrosse: 0x04
+        AD: 0x05
+        Mertik: 0x06
+        Oregon 1: 0x07
+        Oregon 2: 0x08
+        Oregon 3: 0x09
+        Proguard: 0x0A
+        Visionic: 0x0B
+        NEC: 0x0C
+        FS20: 0x0D
+        Reserved: 0x0E
+        Blinds: 0x0F
+        Rubicson: 0x10
+        AE: 0x11
+        Fineoffset: 0x12
+fields:
+    - eSubtype
+    - cSeqnbr
+    - cCmnd

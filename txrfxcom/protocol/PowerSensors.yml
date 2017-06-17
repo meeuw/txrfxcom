@@ -1,0 +1,20 @@
+value: 0x5C
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - voltage
+    - current1
+    - current2
+    - power1
+    - power2
+    - cEnergy1
+    - cEnergy2
+    - powerfactor
+    - cFreq
+    - signal
+    - dummy1
+enums:
+    eSubtype:
+        "Revolt": 01

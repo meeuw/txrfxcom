@@ -1,0 +1,52 @@
+value: 1
+enums:
+    eTranceivertype:
+        "310MHz": 0x50
+        "315MHz": 0x51
+        "433.92MHz (Receiver only)": 0x52
+        "433.92MHz (Transceiver)": 0x53
+        "868.00MHz": 0x55
+        "868.00MHz FSK": 0x56
+        "868.30MHz": 0x57
+        "868.30MHz FSK": 0x58
+        "868.35MHz": 0x59
+        "868.35MHz FSK": 0x5A
+        "868.95MHz": 0x5B
+    eSubtype:
+        "InterfaceResponse": 0
+        "Exit": 0xff
+
+fields:
+    - cSeqnbr
+    - cCmnd
+    - eSubtype
+    - eTranceivertype
+    - cFirmwareVersion
+    - fAEBlyss
+    - fRubicson
+    - fFineOffsetViking
+    - fLighting4
+    - fRSL
+    - fByronSX
+    - fRFU
+    - fUndecoded
+    - fMertik
+    - fADLightwaveRF
+    - fHidekiUPM
+    - fLaCrosse
+    - fFS20
+    - fProGuard
+    - fBlindsT0
+    - fBlindsT1T2T3T4
+    - fX10
+    - fARC
+    - fAC
+    - fHomeEasyEU
+    - fMeiantech
+    - fOregonScientific
+    - fATI
+    - fVisonic
+    - cMsg1
+    - cMsg2
+    - cMsg3
+    - cMsg4

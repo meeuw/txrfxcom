@@ -1,0 +1,23 @@
+value: 0x71
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - dummy1
+    - dummy2
+    - sensorPower1
+    - sensorPower2
+    - sensorPower3
+enums:
+    eSubtype:
+        "Normal data packet": 0x00
+        "New interval time set": 0x01
+        "Calibrate value in <count> in usec": 0x02
+        "New address set": 0x03
+        "Counter value reset within 5 seconds": 0x04
+        "Counter value reset executed": 0x0B
+        "Set interval mode within 5 seconds": 0x0C
+        "Calibration mode within 5 seconds": 0x0D
+        "Set address mode within 5 seconds": 0x0E
+        "Identification packet": 0x0F

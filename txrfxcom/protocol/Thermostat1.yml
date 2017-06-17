@@ -1,0 +1,23 @@
+value: 0x40
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - temperature
+    - temperature_set
+    - eStatus
+    - signal
+enums:
+    eSubtype:
+        "Digimax": 0x00
+        "Digimax with short format (no set point)": 0x01
+    eStatus:
+        "Heating, No status available": 0x00
+        "Heating, Demand": 0x01
+        "Heating, No demand": 0x02
+        "Heating, Initializing": 0x03
+        "Cooling, No status available": 0x80
+        "Cooling, Demand": 0x81
+        "Cooling, No demand": 0x82
+        "Cooling, Initializing": 0x83

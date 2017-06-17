@@ -1,0 +1,10 @@
+value: 0x28
+fields:
+    - eSubtype
+    - cSeqnbr
+    - dummy1
+    - dummy2
+    - dummy3
+enums:
+    eSubtype:
+        "X10 Ninja": 0x00

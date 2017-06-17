@@ -1,0 +1,13 @@
+value: 0x13
+fields:
+    - eSubtype
+    - cSeqnbr
+    - code1
+    - code2
+    - code3
+    - pulse
+    - pulse1
+    - signal
+enums:
+    eSubtype:
+        PT2262: 0x00

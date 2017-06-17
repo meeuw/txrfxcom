@@ -1,0 +1,41 @@
+value: 0x12
+enums:
+    eCmnd:
+        "Bright": 0x00
+        "Dim": 0x08
+        "On": 0x10
+        "Level 1": 0x11
+        "Level 2": 0x12
+        "Level 3": 0x13
+        "Level 4": 0x14
+        "Level 5": 0x15
+        "Level 6": 0x16
+        "Level 7": 0x17
+        "Level 8": 0x18
+        "Level 9": 0x19
+        "Off": 0x1A
+        "Program": 0x1C
+    eSubtype:
+        "Ikea Koppla": 0x00
+fields:
+    - cSeqnbr
+    - eSubtype
+    - system
+    - fChannel1
+    - fChannel2
+    - fChannel3
+    - fChannel4
+    - fChannel5
+    - fChannel6
+    - fChannel7
+    - fChannel8
+    - fChannel9
+    - fChannel10
+    - fChannel11
+    - fChannel12
+    - fChannel13
+    - fChannel14
+    - fChannel15
+    - fChannel16
+    - eCmnd
+    - batterysignal

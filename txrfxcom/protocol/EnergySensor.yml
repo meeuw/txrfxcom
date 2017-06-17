@@ -1,0 +1,22 @@
+value: 0x5A
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - count
+    - instant1
+    - instant2
+    - instant3
+    - instant4
+    - usage1
+    - usage2
+    - usage3
+    - usage4
+    - usage5
+    - usage6
+    - signalbattery
+enums:
+    eSubtype:
+        "CM119/160": 0x01
+        "CM180": 0x02

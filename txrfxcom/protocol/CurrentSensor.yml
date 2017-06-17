@@ -1,0 +1,23 @@
+value: 0x5B
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - count
+    - channel1a
+    - channel1b
+    - channel2a
+    - channel2b
+    - channel3a
+    - channel3b
+    - total1
+    - total2
+    - total3
+    - total4
+    - total5
+    - total6
+    - signalbattery
+enums:
+    eSubtype:
+        "CM180i": 0x01

@@ -1,0 +1,20 @@
+value: 0x55
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - rainRateHigh
+    - rainRateLow
+    - rainTotal1
+    - rainTotal2
+    - rainTotal3
+    - signalbattery
+enums:
+    eSubtype:
+        "RGR126/682/918": 0x01
+        "PCR800": 0x02
+        "TFA": 0x03
+        "UPM RG700": 0x04
+        "WS2300": 0x05
+        "La Crosse TX5": 0x06

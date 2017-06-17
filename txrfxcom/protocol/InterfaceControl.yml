@@ -1,0 +1,22 @@
+value: 0x00
+fields:
+    - eSubtype
+    - cSeqnbr
+    - eCmnd
+    - dummy2
+    - dummy3
+    - dummy4
+    - dummy5
+    - dummy6
+    - dummy7
+    - dummy8
+    - dummy9
+    - dummy10
+enums:
+    eSubtype:
+        "Interface Control": 0x00
+    eCmnd:
+        "reset": 0x00
+        "status": 0x02
+        "save": 0x06
+        "quit": 0xff

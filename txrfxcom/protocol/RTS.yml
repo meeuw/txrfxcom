@@ -1,0 +1,32 @@
+value: 0x1A
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - unitcode
+    - eCmnd
+    - signal
+    - dummy1
+    - dummy2
+    - dummy3
+    - dummy4
+enums:
+    eSubtype:
+        "RTS": 0x00
+        "RTS ext (not yet fully implemented)": 0x01
+    eCmnd:
+        "Stop": 0x00
+        "Up": 0x01
+        "Up+Stop (Set upper limit)": 0x02
+        "Down": 0x03
+        "Down+Stop (Set lower limit)": 0x04
+        "Up+Down (Connect motor)": 0x05
+        "Program": 0x07
+        "Program > 2 seconds": 0x08
+        "Program > 7 seconds": 0x09
+        "Stop > 2 seconds (Set position / Change direction)": 0x0A
+        "Stop > 5 seconds (Set middle position)": 0x0B
+        "Up+Down > 5 seconds (Change upper position)": 0x0C
+        "Erase this RTS remote from RFXtrx": 0x0D
+        "Erase all RTS remotes from the RFXtrx": 0x0E

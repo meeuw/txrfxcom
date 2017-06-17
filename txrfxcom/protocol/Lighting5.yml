@@ -1,0 +1,82 @@
+value: 0x14
+
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - sensorId3
+    - unitcode
+    - eCmnd[eSubtype]
+    - level
+    - signal
+
+enums:
+    eSubtype:
+        "LightwaveRF, Siemens": 0x00
+        "EMW100 GAO/Everflourish": 0x01
+        "BBSB new types": 0x02
+        "MDREMOTE LED dimmer": 0x03
+        "Conrad RSL2": 0x04
+        "Livolo": 0x05
+        "RGB TRC02": 0x06
+    eCmnd:
+        "LightwaveRF, Siemens":
+            "Off": 0x00
+            "On": 0x01
+            "Group off": 0x02
+            "Mood1": 0x03
+            "Mood2": 0x04
+            "Mood3": 0x05
+            "Mood4": 0x06
+            "Mood5": 0x07
+            "Reserved": 0x08
+            "Reserved": 0x09
+            "Unlock": 0x0A
+            "Lock": 0x0B
+            "All lock": 0x0C
+            "Close (inline relay)": 0x0D
+            "Stop (inline relay)": 0x0E
+            "Open (inline relay)": 0x0F
+            "Set level": 0x10
+        "EMW100 GAO/Everflourish":
+            "Off": 0x00
+            "On": 0x01
+            "Learn": 0x02
+        "BBSB new types":
+            "Off": 0x00
+            "On": 0x01
+            "Group Off": 0x02
+            "Group On": 0x03
+        "MDREMOTE LED dimmer":
+            "Power": 0x00
+            "Light": 0x01
+            "Bright": 0x02
+            "Dim": 0x03
+            "100%": 0x04
+            "50%": 0x05
+            "25%": 0x06
+            "Mode+": 0x07
+            "Speed-": 0x08
+            "Speed+": 0x09
+            "Mode-": 0x0A
+
+        "Conrad RSL2":
+            "Off": 0x00
+            "On": 0x01
+            "Group Off": 0x02
+            "Group On": 0x03
+    
+        "Livolo":
+            "Group Off": 0x00
+            "On/Off dimmer or gang1": 0x01
+            "Dim+ or gang2 on/off": 0x02
+            "Dim- or gang3 on/off": 0x03
+    
+        "TRC02":
+            "Off": 0x00
+            "On": 0x01
+            "Bright": 0x02
+            "Dim": 0x03
+            "Color+": 0x04
+            "Color-": 0x05

@@ -1,0 +1,29 @@
+value: 0x54
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - temperature1
+    - temperature2
+    - humidity
+    - eHumstatus
+    - barometricHigh
+    - barometricLow
+    - eForecast
+    - signalbattery
+enums:
+    eSubtype:
+        "BTHR918": 0x01
+        "BTHR918N, BTHR968": 0x02
+    eHumstatus:
+        "Normal": 0x00
+        "Comfort": 0x01
+        "Dry": 0x02
+        "Wet": 0x03
+    eForecast:
+        "No forecast available": 0x00
+        "Sunny": 0x01
+        "Partly cloudy": 0x02
+        "Cloudy": 0x03
+        "Rainy": 0x04

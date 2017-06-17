@@ -1,0 +1,11 @@
+value: 0x18
+fields:
+    - eSubtype
+    - cSeqnbr
+    - dummy1
+    - dummy2
+    - dummy3
+    - dummy4
+enums:
+    eSubtype:
+        "Harrison Curtain": 0x00

@@ -1,0 +1,11 @@
+value: 0x41
+fields:
+    - eSubtype
+    - cSeqnbr
+    - dummy2
+    - dummy3
+    - dummy4
+enums:
+    eSubtype:
+        "HE105": 0x00
+        "RTS10, RFS10, TLX1206": 0x01

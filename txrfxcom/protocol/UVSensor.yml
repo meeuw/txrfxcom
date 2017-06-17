@@ -1,0 +1,15 @@
+value: 0x57
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - uv
+    - dummy1
+    - temperature
+    - signalbattery
+enums:
+    eSubtype:
+        "UVN128, UV138": 0x01
+        "UVN800": 0x02
+        "TFA": 0x03

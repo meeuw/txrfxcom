@@ -1,0 +1,7 @@
+value: 0x5E
+fields:
+    - eSubtype
+    - cSeqnbr
+enums:
+    eSubtype:
+        "Gas usage sensor": 0x01

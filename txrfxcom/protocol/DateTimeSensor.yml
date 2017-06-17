@@ -1,0 +1,17 @@
+value: 0x58
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - dateYY
+    - dateMM
+    - dateDD
+    - dateDow
+    - timeHR
+    - timeMin
+    - timeSec
+    - signalbattery
+enums:
+    eSubtype:
+        "RTGR328N": 0x01

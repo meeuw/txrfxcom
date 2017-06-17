@@ -1,0 +1,21 @@
+value: 0x50
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - temperature1
+    - temperature2
+    - signalbattery
+enums:
+    eSubtype:
+        "THR128/138, THC138": 0x01
+        "THC238/268,THN132,THWR288,THRN122,THN122,AW129/131": 0x02
+        "THWR800": 0x03
+        "RTHN318": 0x04
+        "La Crosse TX2, TX3, TX4, TX17": 0x05
+        "TS15C": 0x06
+        "Viking 02811": 0x07
+        "La Crosse WS2300": 0x08
+        "RUBiCSON": 0x09
+        "TFA 30.3133": 0x0A

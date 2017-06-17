@@ -1,0 +1,11 @@
+value: 0x17
+fields:
+    - eSubtype
+    - cSeqnbr
+    - dummy1
+    - dummy2
+    - dummy3
+    - dummy4
+enums:
+    eSubtype:
+        "Siemens SF01 - LF959RA50/LF259RB50/LF959RB50": 0x00

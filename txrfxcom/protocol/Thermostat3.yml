@@ -1,0 +1,29 @@
+value: 0x42
+fields:
+    - eSubtype
+    - cSeqnbr
+    - unitcode1
+    - unitcode2
+    - unitcode3
+    - eCmnd[eSubtype]
+    - signal
+enums:
+    eSubtype:
+        "Mertik G6R-H4T1": 0x00
+        "Mertik G6R-H4TB / G6-H4T / G6R-H4T21-Z22": 0x01
+    eCmnd:
+        "Mertik G6R-H4T1":
+            "Off": 0x00
+            "On": 0x01
+            "Up": 0x02
+            "Down": 0x03
+            "Run Up": 0x04
+            "Run Down": 0x05
+            "Stop": 0x06
+        "Mertik G6R-H4TB / G6-H4T / G6R-H4T21-Z22":
+            "Off": 0x00
+            "On": 0x01
+            "Up": 0x02
+            "Down": 0x03
+            "2nd Off": 0x04
+            "2nd On": 0x05

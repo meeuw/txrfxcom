@@ -1,0 +1,29 @@
+value: 0x15
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensor1
+    - sensor2
+    - eGroupcode
+    - unitcode
+    - eCmnd
+    - commandSeqnbr
+    - seqNbr2
+    - signal
+enums:
+    eSubtype:
+        "Blyss": 0x00
+    eGroupcode:
+        "A": 0x41
+        "B": 0x42
+        "C": 0x43
+        "D": 0x44
+        "E": 0x45
+        "F": 0x46
+        "G": 0x47
+        "H": 0x48
+    eCmnd:
+        "On": 0x00
+        "Off": 0x01
+        "group On": 0x02
+        "group Off": 0x03

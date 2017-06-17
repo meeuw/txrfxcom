@@ -1,0 +1,7 @@
+value: 0x5F
+fields:
+    - eSubtype
+    - cSeqnbr
+enums:
+    eSubtype:
+        "Water usage sensor": 0x01

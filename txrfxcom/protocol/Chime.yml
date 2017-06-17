@@ -1,0 +1,25 @@
+value: 0x16
+fields:
+    - eSubtype
+    - cSeqnbr
+    - sensorId1
+    - sensorId2
+    - eSound
+    - signal
+enums:
+    eSubtype:
+        "Byron SX": 0x00
+        "Byron MP001": 0x01
+        "SelectPlus": 0x02
+        "RFU": 0x03
+        "Envivo": 0x04
+    eSound:
+        "Tubular 3 notes": 0x01
+        "Big Ben": 0x03
+        "Tubular 2 notes": 0x05
+        "Solo": 0x09
+        "Tubular 3 notes": 0x0D
+        "Big Ben": 0x0E
+        "Tubular 2 notes": 0x06
+        "Solo": 0x02
+
