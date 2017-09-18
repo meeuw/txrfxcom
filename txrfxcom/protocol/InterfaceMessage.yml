@@ -14,12 +14,24 @@ enums:
         "868.95MHz": 0x5B
     eSubtype:
         "InterfaceResponse": 0
+        "UnknownRFYremote": 1
+        "NoRFXtrx433E": 2
+        "RFYremote": 3
+        "ASAremote": 4
+        "StartReceiver": 7
         "Exit": 0xff
+    eResponseOn:
+        "reset": 0x00
+        "status": 0x02
+        "setmode": 0x03
+        "save": 0x06
+        "startreceiver": 0x07
+        "quit": 0xff
 
 fields:
-    - cSeqnbr
-    - cCmnd
     - eSubtype
+    - cSeqnbr
+    - eResponseOn
     - eTranceivertype
     - cFirmwareVersion
     - fAEBlyss
@@ -46,7 +58,14 @@ fields:
     - fOregonScientific
     - fATI
     - fVisonic
+    - fKeeLoq
+    - fHomeConfort
+    - fRFU2
+    - fRFU3
+    - fRFU4
+    - fRFU5
+    - fRFU6
+    - fRFU7
     - cMsg1
     - cMsg2
     - cMsg3
-    - cMsg4

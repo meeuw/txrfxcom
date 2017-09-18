@@ -3,20 +3,50 @@ fields:
     - eSubtype
     - cSeqnbr
     - eCmnd
+    - dummy1
     - dummy2
-    - dummy3
-    - dummy4
-    - dummy5
-    - dummy6
+    - fAEBlyss
+    - fRubicson
+    - fFineOffsetViking
+    - fLighting4
+    - fRSL
+    - fByronSX
+    - fRFU
+    - fUndecoded
+    - fMertik
+    - fADLightwaveRF
+    - fHidekiUPM
+    - fLaCrosse
+    - fFS20
+    - fProGuard
+    - fBlindsT0
+    - fBlindsT1T2T3T4
+    - fX10
+    - fARC
+    - fAC
+    - fHomeEasyEU
+    - fMeiantech
+    - fOregonScientific
+    - fATI
+    - fVisonic
+    - fKeeLoq
+    - fHomeConfort
+    - fRFU2
+    - fRFU3
+    - fRFU4
+    - fRFU5
+    - fRFU6
+    - fRFU7
     - dummy7
     - dummy8
     - dummy9
-    - dummy10
 enums:
     eSubtype:
         "Interface Control": 0x00
     eCmnd:
         "reset": 0x00
         "status": 0x02
+        "setmode": 0x03
         "save": 0x06
+        "startreceiver": 0x07
         "quit": 0xff

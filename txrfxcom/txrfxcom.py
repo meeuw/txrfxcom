@@ -24,12 +24,14 @@ class RFXCOM(protocol.Protocol):
         self.recvBuf = b''
         self.recvState = 'IDLE'
 
+
     def testTransport(self):
         if (self.transport):
             self.testTransportLoop.stop()
             readyTransport = getattr(self, 'readyTransport', None)
             if (callable(readyTransport)):
                 readyTransport()
+
 
     def fields(self, p, **args):
         result = []
@@ -53,6 +55,7 @@ class RFXCOM(protocol.Protocol):
                 result.append(args[v])
         return result
 
+
     @staticmethod
     def packfmt(fields):
         i = 0
@@ -67,6 +70,7 @@ class RFXCOM(protocol.Protocol):
 
         return i * 'B'
 
+
     def generate(self, **args):
         with pkg_resources.resource_stream(
                 "txrfxcom", 'protocol/{0}.yml'.format(args['type'])) as f:
@@ -79,19 +83,22 @@ class RFXCOM(protocol.Protocol):
         return struct.pack('B' + self.packfmt(['type'] + p['fields']),
                            *([len(fields)] + fields))
 
+
     @staticmethod
     def byvalue(d, value):
         for k, v in d.items():
             if v == value:
                 return k
 
+
     def dataReceived(self, data):
+        print('dataReceived', data)
         self.recvBuf += data
-        pktlen = struct.unpack('B', self.recvBuf[0])[0]
+        pktlen = struct.unpack('B', self.recvBuf[:1])[0]
         if len(self.recvBuf) >= pktlen:
             pkt = self.recvBuf[:pktlen + 1]
             self.recvBuf = self.recvBuf[pktlen + 1:]
-            protocol = self.protocols[struct.unpack('B', pkt[1])[0]]
+            protocol = self.protocols[struct.unpack('B', pkt[1:2])[0]]
             with pkg_resources.resource_stream(
                     "txrfxcom", "protocol/{0}.yml".format(protocol)) as f:
                 p = yaml.load(f)
@@ -101,14 +108,20 @@ class RFXCOM(protocol.Protocol):
                 args = {}
                 flag = 0
                 values = struct.unpack(self.packfmt(p['fields']), pkt[2:])
-                for i, field in enumerate(p['fields']):
-                    value = values[i-flag]
+                i = 0
+                for field in p['fields']:
+                    value = values[i]
                     if field[0] == 'e':
                         value = self.byvalue(p['enums'][field], value)
+                        i += 1
                     elif field[0] == 'f':
-                        value = (values[i - flag] >> flag) == 1
+                        value = ((values[i] >> flag) & 1) == 1
                         flag += 1
-
+                        if flag >= 8:
+                            flag = 0
+                            i += 1
+                    else:
+                        i += 1
                     args[field] = value
                 parser(**args)
             else:
@@ -118,20 +131,54 @@ class RFXCOM(protocol.Protocol):
 
 if __name__ == '__main__':
     #print (RFXCOM.packfmt(['cSeqnbr', 'cCmnd', 'eSubtype', 'eTranceivertype', 'cFirmwareVersion', 'fAEBlyss', 'fRubicson', 'fFineOffsetViking', 'fLighting4', 'fRSL', 'fByronSX', 'fRFU', 'fUndecoded', 'fMertik', 'fADLightwaveRF', 'fHidekiUPM', 'fLaCrosse', 'fFS20', 'fProGuard', 'fBlindsT0', 'fBlindsT1T2T3T4', 'fX10', 'fARC', 'fAC', 'fHomeEasyEU', 'fMeiantech', 'fOregonScientific', 'fATI', 'fVisonic', 'cMsg1', 'cMsg2', 'cMsg3', 'cMsg4']))
-    r = RFXCOM()
+    class RFXTest(RFXCOM):
+        def parseInterfaceControl(self, eSubtype, cSeqnbr, eCmnd, dummy1, dummy2, fAEBlyss, fRubicson, fFineOffsetViking, fLighting4, fRSL, fByronSX, fRFU, fUndecoded, fMertik, fADLightwaveRF, fHidekiUPM, fLaCrosse, fFS20, fProGuard, fBlindsT0, fBlindsT1T2T3T4, fX10, fARC, fAC, fHomeEasyEU, fMeiantech, fOregonScientific, fATI, fVisonic, fKeeLoq, fHomeConfort, fRFU2, fRFU3, fRFU4, fRFU5, fRFU6, fRFU7, dummy7, dummy8, dummy9):
+            print ("parseInterfaceControl eSubtype {}, cSeqnbr {}, eCmnd {}, dummy1 {}, dummy2 {}, fAEBlyss {}, fRubicson {}, fFineOffsetViking {}, fLighting4 {}, fRSL {}, fByronSX {}, fRFU {}, fUndecoded {}, fMertik {}, fADLightwaveRF {}, fHidekiUPM {}, fLaCrosse {}, fFS20 {}, fProGuard {}, fBlindsT0 {}, fBlindsT1T2T3T4 {}, fX10 {}, fARC {}, fAC {}, fHomeEasyEU {}, fMeiantech {}, fOregonScientific {}, fATI {}, fVisonic {}, fKeeLoq {}, fHomeConfort {}, fRFU2 {}, fRFU3 {}, fRFU4 {}, fRFU5 {}, fRFU6 {}, fRFU7 {}, dummy7 {}, dummy8 {}, dummy9 {}".format(eSubtype, cSeqnbr, eCmnd, dummy1, dummy2, fAEBlyss, fRubicson, fFineOffsetViking, fLighting4, fRSL, fByronSX, fRFU, fUndecoded, fMertik, fADLightwaveRF, fHidekiUPM, fLaCrosse, fFS20, fProGuard, fBlindsT0, fBlindsT1T2T3T4, fX10, fARC, fAC, fHomeEasyEU, fMeiantech, fOregonScientific, fATI, fVisonic, fKeeLoq, fHomeConfort, fRFU2, fRFU3, fRFU4, fRFU5, fRFU6, fRFU7, dummy7, dummy8, dummy9))
+            pass
+
+    r = RFXTest()
+
     d = r.generate(
         type='InterfaceControl',
         eSubtype='Interface Control',
         cSeqnbr=0,
         eCmnd="reset",
-        dummy1=1,
-        dummy2=2,
-        dummy3=3,
-        dummy4=4,
-        dummy5=5,
-        dummy6=6,
+        dummy1=33,
+        dummy2=44,
+        fAEBlyss=0,
+        fRubicson=0,
+        fFineOffsetViking=0,
+        fLighting4=0,
+        fRSL=0,
+        fByronSX=0,
+        fRFU=0,
+        fUndecoded=0,
+        fMertik=1,
+        fADLightwaveRF=0,
+        fHidekiUPM=0,
+        fLaCrosse=0,
+        fFS20=0,
+        fProGuard=0,
+        fBlindsT0=0,
+        fBlindsT1T2T3T4=0,
+        fX10=0,
+        fARC=0,
+        fAC=0,
+        fHomeEasyEU=0,
+        fMeiantech=0,
+        fOregonScientific=0,
+        fATI=0,
+        fVisonic=0,
+        fKeeLoq=0,
+        fHomeConfort=0,
+        fRFU2=0,
+        fRFU3=0,
+        fRFU4=0,
+        fRFU5=0,
+        fRFU6=0,
+        fRFU7=1,
         dummy7=7,
         dummy8=8,
         dummy9=9,
-        dummy10=10, )
+    )
     r.dataReceived(d)
