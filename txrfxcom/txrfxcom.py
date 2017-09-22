@@ -17,6 +17,7 @@ class RFXCOM(protocol.Protocol):
         self.testTransportLoop.start(1.0)  # call every second
         self.protocols = {}
         for fileName in pkg_resources.resource_listdir("txrfxcom", 'protocol'):
+            if fileName.startswith('.'): continue
             with pkg_resources.resource_stream("txrfxcom",
                                                "protocol/" + fileName) as f:
                 proto = yaml.load(f)
