@@ -9,6 +9,7 @@ import glob
 import os.path
 import pkg_resources
 import json
+import serial
 
 
 class RFXCOM(protocol.Protocol):
@@ -25,6 +26,54 @@ class RFXCOM(protocol.Protocol):
                 self.protocols[proto['value']] = protoName
         self.recvBuf = b''
         self.recvState = 'IDLE'
+
+
+    def reset(self, port):
+        with serial.Serial(port, '38400') as ser:
+            ser.write(self.generate(
+                type="InterfaceControl",
+                eSubtype="Interface Control",
+                cSeqnbr=self.getNextSeqNbr(),
+                eCmnd="reset",
+                dummy1=0,
+                dummy2=0x1c,
+                fAEBlyss=0,
+                fRubicson=0,
+                fFineOffsetViking=0,
+                fLighting4=0,
+                fRSL=0,
+                fByronSX=0,
+                fRFU=0,
+                fUndecoded=0,
+                fMertik=0,
+                fADLightwaveRF=0,
+                fHidekiUPM=0,
+                fLaCrosse=0,
+                fFS20=0,
+                fProGuard=0,
+                fBlindsT0=0,
+                fBlindsT1T2T3T4=0,
+                fX10=0,
+                fARC=0,
+                fAC=0,
+                fHomeEasyEU=0,
+                fMeiantech=0,
+                fOregonScientific=0,
+                fATI=0,
+                fVisonic=0,
+                fKeeLoq=0,
+                fHomeConfort=0,
+                fRFU2=0,
+                fRFU3=0,
+                fRFU4=0,
+                fRFU5=0,
+                fRFU6=0,
+                fRFU7=0,
+                dummy7=0,
+                dummy8=0,
+                dummy9=0
+            ))
+
 
 
     def testTransport(self):
