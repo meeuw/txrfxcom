@@ -8,6 +8,7 @@ import yaml
 import glob
 import os.path
 import pkg_resources
+import json
 
 
 class RFXCOM(protocol.Protocol):
@@ -103,30 +104,35 @@ class RFXCOM(protocol.Protocol):
                     "txrfxcom", "protocol/{0}.yml".format(protocol)) as f:
                 p = yaml.load(f)
 
+            args = {}
+            flag = 0
+            fmt = self.packfmt(p['fields'])
+            print(fmt, len(fmt), len(pkt))
+
+            values = struct.unpack(fmt, pkt[2:])
+            i = 0
+            for field in p['fields']:
+                value = values[i]
+                if field[0] == 'e':
+                    value = self.byvalue(p['enums'][field], value)
+                    i += 1
+                elif field[0] == 'f':
+                    value = ((values[i] >> flag) & 1) == 1
+                    flag += 1
+                    if flag >= 8:
+                        flag = 0
+                        i += 1
+                else:
+                    i += 1
+                args[field] = value
+
             parser = getattr(self, "parse" + protocol, None)
             if callable(parser):
-                args = {}
-                flag = 0
-                values = struct.unpack(self.packfmt(p['fields']), pkt[2:])
-                i = 0
-                for field in p['fields']:
-                    value = values[i]
-                    if field[0] == 'e':
-                        value = self.byvalue(p['enums'][field], value)
-                        i += 1
-                    elif field[0] == 'f':
-                        value = ((values[i] >> flag) & 1) == 1
-                        flag += 1
-                        if flag >= 8:
-                            flag = 0
-                            i += 1
-                    else:
-                        i += 1
-                    args[field] = value
                 parser(**args)
             else:
                 print("unhandled parse{0}({1})".format(protocol, ", ".join(
                     p['fields'])))
+                print(json.dumps(args, indent=4))
 
 
 if __name__ == '__main__':
