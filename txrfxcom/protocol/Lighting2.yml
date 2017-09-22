@@ -4,6 +4,7 @@ enums:
         "AC": 0x00
         "HomeEasyEU":  0x01
         "Anslut": 0x02
+        "Kambrook RF3672": 0x03
     eCmnd:
         "Off": 0x00
         "On": 0x01
@@ -11,6 +12,24 @@ enums:
         "Group Off": 0x03
         "Group On": 0x04
         "Set Group Level": 0x05
+    eSignal:
+        "-120dBm": 0x00
+        "-112dBm": 0x10
+        "-104dBm": 0x20
+        "-96dBm": 0x30
+        "-88dBm": 0x40
+        "-80dBm": 0x50
+        "-72dBm": 0x60
+        "-64dBm": 0x70
+        "-56dBm": 0x80
+        "-48dBm": 0x90
+        "-40dBm": 0xA0
+        "-32dBm": 0xB0
+        "-24dBm": 0xC0
+        "-16dBm": 0xD0
+        "-8dBm": 0xE0
+        "-0dBm": 0xF0
+
 fields:
     - eSubtype
     - cSeqnbr
@@ -21,4 +40,4 @@ fields:
     - unitcode
     - eCmnd
     - dimLevel
-    - signal
+    - eSignal

@@ -4,7 +4,7 @@ fields:
     - cSeqnbr
     - eHousecode
     - unitcode
-    - command
+    - eCommand
     - signallevel
 enums:
     eHousecode:
@@ -36,3 +36,10 @@ enums:
         "Energenie ENER010": 0x08
         "Energenie 5-gang": 0x09
         "COCO GDR2-2000R": 0x0A
+    eCommand:
+        "Off": 0
+        "On": 1
+        "Dim": 2
+        "Bright": 3
+        "All Off": 5
+        "All On": 6
