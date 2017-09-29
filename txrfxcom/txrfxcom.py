@@ -2,12 +2,14 @@
 
 from twisted.internet import protocol
 from twisted.internet import task
+from twisted.python import log
 
 import struct
 import yaml
 import os.path
 import pkg_resources
 import json
+import logging
 
 
 class RFXCOM(protocol.Protocol):
@@ -95,7 +97,7 @@ class RFXCOM(protocol.Protocol):
 
 
     def dataReceived(self, data):
-        print('dataReceived', data)
+        log.msg('dataReceived {}'.format(data), loglevel=logging.DEBUG)
         self.recvBuf += data
         pktlen = struct.unpack('B', self.recvBuf[:1])[0]
         if len(self.recvBuf) >= pktlen:
@@ -109,7 +111,7 @@ class RFXCOM(protocol.Protocol):
             args = {}
             flag = 0
             fmt = self.packfmt(p['fields'])
-            print(fmt, len(fmt), len(pkt))
+            log.msg("{} {} {}".format(fmt, len(fmt), len(pkt)), loglevel=logging.DEBUG)
 
             values = struct.unpack(fmt, pkt[2:])
             i = 0
