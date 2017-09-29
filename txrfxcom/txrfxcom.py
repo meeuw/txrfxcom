@@ -5,7 +5,6 @@ from twisted.internet import task
 
 import struct
 import yaml
-import glob
 import os.path
 import pkg_resources
 import json
