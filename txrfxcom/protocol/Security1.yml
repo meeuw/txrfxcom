@@ -19,6 +19,7 @@ enums:
         "Visonic PowerCode door/window sensor - auxiliary contact (no alive packets)": 0x07
         "Meiantech": 0x08
         "SA30": 0x09
+        "RM174RF smoke detector": 0x0A
 
     eStatus:
         "Normal": 0x00
