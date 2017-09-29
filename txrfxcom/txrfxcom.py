@@ -99,7 +99,7 @@ class RFXCOM(protocol.Protocol):
         log.msg('dataReceived {}'.format(data), loglevel=logging.DEBUG)
         self.recvBuf += data
         pktlen = struct.unpack('B', self.recvBuf[:1])[0]
-        if len(self.recvBuf) >= pktlen:
+        if len(self.recvBuf) > pktlen:
             pkt = self.recvBuf[:pktlen + 1]
             self.recvBuf = self.recvBuf[pktlen + 1:]
             protocol = self.protocols[struct.unpack('B', pkt[1:2])[0]]
