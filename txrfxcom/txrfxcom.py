@@ -133,9 +133,15 @@ class RFXCOM(protocol.Protocol):
             if callable(parser):
                 parser(**args)
             else:
-                print("unhandled parse{0}({1})".format(protocol, ", ".join(
-                    p['fields'])))
-                print(json.dumps(args, indent=4))
+                log.msg("parseDefault", loglevel=logging.DEBUG)
+                self.parseDefault(protocol, **args)
+
+
+    def parseDefault(self, protocol, **args):
+        log.msg("unhandled parse{0}({1})".format(protocol, ", ".join(
+            args.keys())), loglevel=logging.DEBUG)
+        log.msg(json.dumps(args, indent=4), loglevel=logging.DEBUG)
+
 
 
 if __name__ == '__main__':
