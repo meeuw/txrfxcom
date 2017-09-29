@@ -25,7 +25,6 @@ class RFXCOM(protocol.Protocol):
                 protoName = os.path.basename(fileName)[:-4]
                 self.protocols[proto['value']] = protoName
         self.recvBuf = b''
-        self.recvState = 'IDLE'
 
 
 
