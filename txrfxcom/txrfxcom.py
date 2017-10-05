@@ -10,6 +10,7 @@ import os.path
 import pkg_resources
 import json
 import logging
+import binascii
 
 
 class RFXCOM(protocol.Protocol):
@@ -96,7 +97,7 @@ class RFXCOM(protocol.Protocol):
 
 
     def dataReceived(self, data):
-        log.msg('dataReceived {}'.format(data), loglevel=logging.DEBUG)
+        log.msg('dataReceived {}'.format(binascii.hexlify(data)), loglevel=logging.DEBUG)
         self.recvBuf += data
         pktlen = struct.unpack('B', self.recvBuf[:1])[0]
         if len(self.recvBuf) > pktlen:
