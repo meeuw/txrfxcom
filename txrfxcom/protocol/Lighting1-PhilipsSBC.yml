@@ -1,0 +1,33 @@
+type: 0x10
+eSubtype: 0x07
+cSeqnbr: UInt8
+eHousecode:
+    Type: Enum
+    Enum:
+        A: 0x41
+        B: 0x42
+        C: 0x43
+        D: 0x44
+        E: 0x45
+        F: 0x46
+        G: 0x47
+        H: 0x48
+        I: 0x49
+        J: 0x4A
+        K: 0x4B
+        L: 0x4C
+        M: 0x4D
+        N: 0x4E
+        O: 0x4F
+        P: 0x50
+unitcode: UInt8
+eCommand:
+    Type: Enum
+    Enum:
+        "Off": 0
+        "On": 1
+        "Dim": 2
+        "Bright": 3
+        "All Off": 5
+        "All On": 6
+signallevel: UInt8

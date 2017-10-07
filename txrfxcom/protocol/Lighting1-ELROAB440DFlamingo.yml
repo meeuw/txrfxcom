@@ -1,18 +1,5 @@
 type: 0x10
-eSubtype:
-    Type: Enum
-    Enum:
-        "X10 Lighting": 0x00
-        "ARC": 0x01
-        "ELRO AB400D (Flamingo)": 0x02
-        "Waveman": 0x03
-        "Chacon EMW200": 0x04
-        "IMPULS": 0x05
-        "RisingSun": 0x06
-        "Philips SBC": 0x07
-        "Energenie ENER010": 0x08
-        "Energenie 5-gang": 0x09
-        "COCO GDR2-2000R": 0x0A
+eSubtype: 0x02
 cSeqnbr: UInt8
 eHousecode:
     Type: Enum
