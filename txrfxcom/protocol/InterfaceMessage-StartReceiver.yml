@@ -1,0 +1,7 @@
+type: 1
+eSubtype: 7
+cSeqnbr: UInt8
+eResponseOn: 7
+message:
+    Type: FixedString
+    Value: Copyright RFXCOM
