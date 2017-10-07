@@ -1,15 +1,14 @@
-value: 0x72
-fields:
-    - eSubtype
-    - cSeqnbr
-    - dummy1
-    - dummy2
-    - dummy3
-    - dummy4
-    - dummy5
-    - dummy6
-enums:
-    eSubtype:
+type: 0x72
+eSubtype:
+    Type: Enum
+    Enum:
         "FS20": 0x00
         "FHT8V valve": 0x01
         "FHT80 door/window sensor": 0x02
+cSeqnbr: UInt8
+dummy1: UInt8
+dummy2: UInt8
+dummy3: UInt8
+dummy4: UInt8
+dummy5: UInt8
+dummy6: UInt8

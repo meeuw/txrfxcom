@@ -1,21 +1,16 @@
 value: 0x1A
-fields:
-    - eSubtype
-    - cSeqnbr
-    - sensorId1
-    - sensorId2
-    - unitcode
-    - eCmnd
-    - signal
-    - dummy1
-    - dummy2
-    - dummy3
-    - dummy4
-enums:
-    eSubtype:
+eSubtype:
+    Type: Enum
+    Enum:
         "RTS": 0x00
         "RTS ext (not yet fully implemented)": 0x01
-    eCmnd:
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+unitcode: UInt8
+eCmnd:
+    Type: Enum
+    Enum:
         "Stop": 0x00
         "Up": 0x01
         "Up+Stop (Set upper limit)": 0x02
@@ -30,3 +25,8 @@ enums:
         "Up+Down > 5 seconds (Change upper position)": 0x0C
         "Erase this RTS remote from RFXtrx": 0x0D
         "Erase all RTS remotes from the RFXtrx": 0x0E
+signal: UInt8
+dummy1: UInt8
+dummy2: UInt8
+dummy3: UInt8
+dummy4: UInt8

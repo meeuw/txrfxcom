@@ -1,0 +1,17 @@
+type: 0x42
+eSubtype: 0x00
+cSeqnbr: UInt8
+unitcode1: UInt8
+unitcode2: UInt8
+unitcode3: UInt8
+eCmnd:
+    Type: Enum
+    Enum:
+        "Off": 0x00
+        "On": 0x01
+        "Up": 0x02
+        "Down": 0x03
+        "Run Up": 0x04
+        "Run Down": 0x05
+        "Stop": 0x06
+signal: UInt8

@@ -1,0 +1,77 @@
+type: 0x30
+eSubtype: 0x00
+cSeqnbr: UInt8
+dummy4: UInt8
+eCmnd:
+    Type: Enum
+    Enum:
+        "A": 0x00
+        "B": 0x01
+        "Power": 0x02
+        "TV": 0x03
+        "DVD": 0x04
+        "?": 0x05
+        "Guide": 0x06
+        "Drag": 0x07
+        "VOL+": 0x08
+        "VOL-": 0x09
+        "MUTE": 0x0A
+        "CHAN+": 0x0B
+        "CHAN-": 0x0C
+        "1": 0x0D
+        "2": 0x0E
+        "3": 0x0F
+        "4": 0x10
+        "5": 0x11
+        "6": 0x12
+        "7": 0x13
+        "8": 0x14
+        "9": 0x15
+        "txt": 0x16
+        "0": 0x17
+        "Snapshot ESQ": 0x18
+        "C": 0x19
+        "^": 0x1A
+        "D": 0x1B
+        "TV/RADIO": 0x1C
+        "<": 0x1D
+        "OK": 0x1E
+        ">": 0x1F
+        "<-": 0x20
+        "E": 0x21
+        "v": 0x22
+        "F": 0x23
+        "Rewind": 0x24
+        "Play": 0x25
+        "Fast forward": 0x26
+        "Record": 0x27
+        "Stop": 0x28
+        "Pause": 0x29
+        "TV": 0x2C
+        "VCR": 0x2D
+        "RADIO": 0x2E
+        "TV Preview": 0x2F
+        "Channel list": 0x30
+        "Video Desktop": 0x31
+        "red": 0x32
+        "green": 0x33
+        "yellow": 0x34
+        "blue": 0x35
+        "rename TAB": 0x36
+        "Acquire image": 0x37
+        "edit image": 0x38
+        "Full Screen": 0x39
+        "DVD Audio": 0x3A
+        "Cursor-left": 0x70
+        "Cursor-right": 0x71
+        "Cursor-up": 0x72
+        "Cursor-down": 0x73
+        "Cursor-up-left": 0x74
+        "Cursor-up-right": 0x75
+        "Cursor-down-right": 0x76
+        "Cursor-down-left": 0x77
+        "V": 0x78
+        "V-End": 0x79
+        "X": 0x7C
+        "X-End": 0x7D
+toggle: UInt8

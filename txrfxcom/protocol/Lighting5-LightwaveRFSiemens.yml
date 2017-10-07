@@ -1,0 +1,29 @@
+type: 0x14
+eSubtype: 0x00
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+sensorId3: UInt8
+unitcode: UInt8
+eCmnd:
+    Type: Enum
+    Enum:
+        "Off": 0x00
+        "On": 0x01
+        "Group off": 0x02
+        "Mood1": 0x03
+        "Mood2": 0x04
+        "Mood3": 0x05
+        "Mood4": 0x06
+        "Mood5": 0x07
+        "Reserved": 0x08
+        "Reserved": 0x09
+        "Unlock": 0x0A
+        "Lock": 0x0B
+        "All lock": 0x0C
+        "Close (inline relay)": 0x0D
+        "Stop (inline relay)": 0x0E
+        "Open (inline relay)": 0x0F
+        "Set level": 0x10
+level: UInt8
+signal: UInt8

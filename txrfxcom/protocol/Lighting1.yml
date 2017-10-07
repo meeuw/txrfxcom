@@ -1,13 +1,22 @@
-value: 0x10
-fields:
-    - eSubtype
-    - cSeqnbr
-    - eHousecode
-    - unitcode
-    - eCommand
-    - signallevel
-enums:
-    eHousecode:
+type: 0x10
+eSubtype:
+    Type: Enum
+    Enum:
+        "X10 Lighting": 0x00
+        "ARC": 0x01
+        "ELRO AB400D (Flamingo)": 0x02
+        "Waveman": 0x03
+        "Chacon EMW200": 0x04
+        "IMPULS": 0x05
+        "RisingSun": 0x06
+        "Philips SBC": 0x07
+        "Energenie ENER010": 0x08
+        "Energenie 5-gang": 0x09
+        "COCO GDR2-2000R": 0x0A
+cSeqnbr: UInt8
+eHousecode:
+    Type: Enum
+    Enum:
         A: 0x41
         B: 0x42
         C: 0x43
@@ -24,22 +33,14 @@ enums:
         N: 0x4E
         O: 0x4F
         P: 0x50
-    eSubtype:
-        "X10 Lighting": 0x00
-        "ARC": 0x01
-        "ELRO AB400D (Flamingo)": 0x02
-        "Waveman": 0x03
-        "Chacon EMW200": 0x04
-        "IMPULS": 0x05
-        "RisingSun": 0x06
-        "Philips SBC": 0x07
-        "Energenie ENER010": 0x08
-        "Energenie 5-gang": 0x09
-        "COCO GDR2-2000R": 0x0A
-    eCommand:
+unitcode: UInt8
+eCommand:
+    Type: Enum
+    Enum:
         "Off": 0
         "On": 1
         "Dim": 2
         "Bright": 3
         "All Off": 5
         "All On": 6
+signallevel: UInt8

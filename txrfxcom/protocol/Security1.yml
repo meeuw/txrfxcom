@@ -1,14 +1,7 @@
-value: 0x20
-fields:
-    - eSubtype
-    - cSeqnbr
-    - sensorId1
-    - sensorId2
-    - sensorId3
-    - eStatus
-    - signalbattery
-enums:
-    eSubtype:
+type: 0x20
+eSubtype:
+    Type: Enum
+    Enum:
         "X10 security door/window sensor": 0x00
         "X10 security motion sensor": 0x01
         "X10 security remote (no alive packets)": 0x02
@@ -20,8 +13,13 @@ enums:
         "Meiantech": 0x08
         "SA30": 0x09
         "RM174RF smoke detector": 0x0A
-
-    eStatus:
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+sensorId3: UInt8
+eStatus:
+    Type: Enum
+    Enum:
         "Normal": 0x00
         "Normal delayed": 0x01
         "Alarm": 0x02
@@ -50,3 +48,4 @@ enums:
         "Normal delayed + tamper": 0x83
         "Motion + tamper": 0x84
         "No motion + tamper": 0x85
+signalbattery: UInt8

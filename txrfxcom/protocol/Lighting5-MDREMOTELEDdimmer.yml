@@ -1,0 +1,23 @@
+type: 0x14
+eSubtype: 0x03
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+sensorId3: UInt8
+unitcode: UInt8
+eCmnd:
+    Type: Enum
+    Enum:
+        "Power": 0x00
+        "Light": 0x01
+        "Bright": 0x02
+        "Dim": 0x03
+        "100%": 0x04
+        "50%": 0x05
+        "25%": 0x06
+        "Mode+": 0x07
+        "Speed-": 0x08
+        "Speed+": 0x09
+        "Mode-": 0x0A
+level: UInt8
+signal: UInt8

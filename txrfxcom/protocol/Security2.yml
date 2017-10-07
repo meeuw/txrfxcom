@@ -1,35 +1,35 @@
-value: 33
-fields:
-    - eSubtype
-    - cSeqnbr
-    - id1
-    - id2
-    - id3
-    - id4
-    - id5
-    - id6
-    - id7
-    - id8
-    - eId9
-    - dummyq
-    - dummyw
-    - dummym
-    - dummyr
-    - dummyt
-    - dummyy
-    - dummyu
-    - dummyi
-    - dummyo
-    - dummyp
-    - dummya
-    - dummys
-    - dummyd
-    - dummyn
-    - dummyg
-    - dummyh
-enums:
-    eSubtype:
+type: 33
+eSubtype:
+    Type: Enum
+    Enum:
         "Transmit RAW packet": 0x00
-    eId9:
+cSeqnbr: UInt8
+id1: UInt8
+id2: UInt8
+id3: UInt8
+id4: UInt8
+id5: UInt8
+id6: UInt8
+id7: UInt8
+id8: UInt8
+eId9:
+    Type: Enum
+    Enum:
         "battery full": 0x00
         "battery empty": 0x01
+dummyq: UInt8
+dummyw: UInt8
+dummym: UInt8
+dummyr: UInt8
+dummyt: UInt8
+dummyy: UInt8
+dummyu: UInt8
+dummyi: UInt8
+dummyo: UInt8
+dummyp: UInt8
+dummya: UInt8
+dummys: UInt8
+dummyd: UInt8
+dummyn: UInt8
+dummyg: UInt8
+dummyh: UInt8

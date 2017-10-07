@@ -1,13 +1,12 @@
-value: 0x13
-fields:
-    - eSubtype
-    - cSeqnbr
-    - code1
-    - code2
-    - code3
-    - pulse
-    - pulse1
-    - signal
-enums:
-    eSubtype:
+type: 0x13
+eSubtype:
+    Type: Enum
+    Enum:
         PT2262: 0x00
+cSeqnbr: UInt8
+code1: UInt8
+code2: UInt8
+code3: UInt8
+pulse: UInt8
+pulse1: UInt8
+signal: UInt8

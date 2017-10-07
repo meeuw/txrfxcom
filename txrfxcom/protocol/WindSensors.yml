@@ -1,22 +1,7 @@
-value: 0x56
-fields:
-    - eSubtype
-    - cSeqnbr
-    - sensorId1
-    - sensorId2
-    - direction1
-    - direction2
-    - avSpeed1
-    - avSpeed2
-    - gust1
-    - gust2
-    - temperature1
-    - temperature2
-    - windChill1
-    - windChill2
-    - signalbattery
-enums:
-    eSubtype:
+type: 0x56
+eSubtype:
+    Type: Enum
+    Enum:
         "WTGR800": 0x01
         "WGR800": 0x02
         "STR918, WGR918, WGR928": 0x03
@@ -24,3 +9,17 @@ enums:
         "UPM WDS500": 0x05
         "WS2300": 0x06
         "Alecto WS4500, Auriol H13726, Hama EWS1500, Meteoscan W155/W160, Ventus WS155": 0x07
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+direction1: UInt8
+direction2: UInt8
+avSpeed1: UInt8
+avSpeed2: UInt8
+gust1: UInt8
+gust2: UInt8
+temperature1: UInt8
+temperature2: UInt8
+windChill1: UInt8
+windChill2: UInt8
+signalbattery: UInt8

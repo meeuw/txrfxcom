@@ -1,0 +1,25 @@
+type: 0x16
+eSubtype: 0x03
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+eSound:
+    Type: Enum
+    Enum:
+        "sound 0": 0x00
+        "sound 1 SX21 Tubular 3 notes": 0x01
+        "sound 2 SX21 Solo (02)": 0x02
+        "sound 3 SX21 Big Ben (03)": 0x03
+        "sound 4": 0x04
+        "sound 5 Tubular 2 notes": 0x05
+        "sound 6 Tubular 3 notes": 0x06
+        "sound 7": 0x07
+        "sound 8": 0x08
+        "sound 9 SX21 Solo": 0x09
+        "sound 10": 0x0A
+        "sound 11": 0x0B
+        "sound 12": 0x0C
+        "sound 13 SX21 Tubular 3 notes": 0x0D
+        "sound 14 SX21 Big Ben": 0x0E
+        "sound 15": 0x0F
+signal: UInt8

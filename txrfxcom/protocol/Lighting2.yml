@@ -1,18 +1,30 @@
-value: 0x11
-enums:
-    eSubtype:
+type: 0x11
+eSubtype:
+    Type: Enum
+    Enum:
         "AC": 0x00
         "HomeEasyEU":  0x01
         "Anslut": 0x02
         "Kambrook RF3672": 0x03
-    eCmnd:
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+sensorId3: UInt8
+sensorId4: UInt8
+unitcode: UInt8
+eCmnd:
+    Type: Enum
+    Enum:
         "Off": 0x00
         "On": 0x01
         "Set level": 0x02
         "Group Off": 0x03
         "Group On": 0x04
         "Set Group Level": 0x05
-    eSignal:
+dimLevel: UInt8
+eSignal:
+    Type: Enum
+    Enum:
         "-120dBm": 0x00
         "-112dBm": 0x10
         "-104dBm": 0x20
@@ -29,15 +41,3 @@ enums:
         "-16dBm": 0xD0
         "-8dBm": 0xE0
         "-0dBm": 0xF0
-
-fields:
-    - eSubtype
-    - cSeqnbr
-    - sensorId1
-    - sensorId2
-    - sensorId3
-    - sensorId4
-    - unitcode
-    - eCmnd
-    - dimLevel
-    - eSignal

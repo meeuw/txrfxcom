@@ -1,15 +1,7 @@
-value: 0x19
-fields:
-    - eSubtype
-    - cSeqnbr
-    - dummy1
-    - dummy2
-    - dummy3
-    - dummy4
-    - dummy5
-    - dummy6
-enums:
-    eSubtype:
+type: 0x19
+eSubtype:
+    Type: Enum
+    Enum:
         "BlindsT0 / Rollertrol, Hasta new": 0x00
         "BlindsT1 / Hasta old": 0x01
         "BlindsT2 / A-OK RF01": 0x02
@@ -18,3 +10,10 @@ enums:
         "BlindsT5 / Media Mount": 0x05
         "BlindsT6 / DC106/Rohrmotor24-RMF/Yooda": 0x06
         "BlindsT7 / Forest": 0x07
+cSeqnbr: UInt8
+dummy1: UInt8
+dummy2: UInt8
+dummy3: UInt8
+dummy4: UInt8
+dummy5: UInt8
+dummy6: UInt8

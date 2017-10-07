@@ -1,6 +1,28 @@
-value: 1
-enums:
-    eTranceivertype:
+type: 1
+eSubtype:
+    Type: Enum
+    Enum:
+        "InterfaceResponse": 0
+        "UnknownRFYremote": 1
+        "NoRFXtrx433E": 2
+        "RFYremote": 3
+        "ASAremote": 4
+        "StartReceiver": 7
+        "Exit": 0xff
+cSeqnbr: UInt8
+eResponseOn:
+    Type: Enum
+    Enum:
+        "reset": 0x00
+        "status": 0x02
+        "setmode": 0x03
+        "save": 0x06
+        "startreceiver": 0x07
+        "quit": 0xff
+eTranceivertype:
+    Type: Enum
+    Enum:
+        "Huh1": 0x43
         "310MHz": 0x50
         "315MHz": 0x51
         "433.92MHz (Receiver only)": 0x52
@@ -12,67 +34,46 @@ enums:
         "868.35MHz": 0x59
         "868.35MHz FSK": 0x5A
         "868.95MHz": 0x5B
-    eSubtype:
-        "InterfaceResponse": 0
-        "UnknownRFYremote": 1
-        "NoRFXtrx433E": 2
-        "RFYremote": 3
-        "ASAremote": 4
-        "StartReceiver": 7
-        "Exit": 0xff
-    eResponseOn:
-        "reset": 0x00
-        "status": 0x02
-        "setmode": 0x03
-        "save": 0x06
-        "startreceiver": 0x07
-        "quit": 0xff
-
-fields:
-    - eSubtype
-    - cSeqnbr
-    - eResponseOn
-    - eTranceivertype
-    - cFirmwareVersion
-    - fAEBlyss
-    - fRubicson
-    - fFineOffsetViking
-    - fLighting4
-    - fRSL
-    - fByronSX
-    - fRFU
-    - fUndecoded
-    - fMertik
-    - fADLightwaveRF
-    - fHidekiUPM
-    - fLaCrosse
-    - fFS20
-    - fProGuard
-    - fBlindsT0
-    - fBlindsT1T2T3T4
-    - fX10
-    - fARC
-    - fAC
-    - fHomeEasyEU
-    - fMeiantech
-    - fOregonScientific
-    - fATI
-    - fVisonic
-    - fKeeLoq
-    - fHomeConfort
-    - fRFU2
-    - fRFU3
-    - fRFU4
-    - fRFU5
-    - fRFU6
-    - fRFU7
-    - cMsg1
-    - cMsg2
-    - cMsg3
-    - cMsg4
-    - cMsg5
-    - cMsg6
-    - cMsg7
-    - cMsg8
-    - cMsg9
-    - cMsg10
+cFirmwareVersion: UInt8
+fAEBlyss: Bit
+fRubicson: Bit
+fFineOffsetViking: Bit
+fLighting4: Bit
+fRSL: Bit
+fByronSX: Bit
+fRFU: Bit
+fUndecoded: Bit
+fMertik: Bit
+fADLightwaveRF: Bit
+fHidekiUPM: Bit
+fLaCrosse: Bit
+fFS20: Bit
+fProGuard: Bit
+fBlindsT0: Bit
+fBlindsT1T2T3T4: Bit
+fX10: Bit
+fARC: Bit
+fAC: Bit
+fHomeEasyEU: Bit
+fMeiantech: Bit
+fOregonScientific: Bit
+fATI: Bit
+fVisonic: Bit
+fKeeLoq: Bit
+fHomeConfort: Bit
+fRFU2: Bit
+fRFU3: Bit
+fRFU4: Bit
+fRFU5: Bit
+fRFU6: Bit
+fRFU7: Bit
+cMsg1: UInt8
+cMsg2: UInt8
+cMsg3: UInt8
+cMsg4: UInt8
+cMsg5: UInt8
+cMsg6: UInt8
+cMsg7: UInt8
+cMsg8: UInt8
+cMsg9: UInt8
+cMsg10: UInt8

@@ -1,17 +1,16 @@
-value: 0x58
-fields:
-    - eSubtype
-    - cSeqnbr
-    - sensorId1
-    - sensorId2
-    - dateYY
-    - dateMM
-    - dateDD
-    - dateDow
-    - timeHR
-    - timeMin
-    - timeSec
-    - signalbattery
-enums:
-    eSubtype:
+type: 0x58
+eSubtype:
+    Type: Enum
+    Enum:
         "RTGR328N": 0x01
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+dateYY: UInt8
+dateMM: UInt8
+dateDD: UInt8
+dateDow: UInt8
+timeHR: UInt8
+timeMin: UInt8
+timeSec: UInt8
+signalbattery: UInt8

@@ -1,0 +1,16 @@
+type: 0x14
+eSubtype: 0x05
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+sensorId3: UInt8
+unitcode: UInt8
+eCmnd:
+    Type: Enum
+    Enum:
+        "Group Off": 0x00
+        "On/Off dimmer or gang1": 0x01
+        "Dim+ or gang2 on/off": 0x02
+        "Dim- or gang3 on/off": 0x03
+level: UInt8
+signal: UInt8

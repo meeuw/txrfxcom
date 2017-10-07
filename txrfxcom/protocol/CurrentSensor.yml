@@ -1,23 +1,22 @@
-value: 0x5B
-fields:
-    - eSubtype
-    - cSeqnbr
-    - sensorId1
-    - sensorId2
-    - count
-    - channel1a
-    - channel1b
-    - channel2a
-    - channel2b
-    - channel3a
-    - channel3b
-    - total1
-    - total2
-    - total3
-    - total4
-    - total5
-    - total6
-    - signalbattery
-enums:
-    eSubtype:
+type: 0x5B
+eSubtype:
+    Type: Enum
+    Enum:
         "CM180i": 0x01
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+count: UInt8
+channel1a: UInt8
+channel1b: UInt8
+channel2a: UInt8
+channel2b: UInt8
+channel3a: UInt8
+channel3b: UInt8
+total1: UInt8
+total2: UInt8
+total3: UInt8
+total4: UInt8
+total5: UInt8
+total6: UInt8
+signalbattery: UInt8

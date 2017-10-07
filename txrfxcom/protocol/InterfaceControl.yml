@@ -1,52 +1,52 @@
-value: 0x00
-fields:
-    - eSubtype
-    - cSeqnbr
-    - eCmnd
-    - dummy1
-    - dummy2
-    - fAEBlyss
-    - fRubicson
-    - fFineOffsetViking
-    - fLighting4
-    - fRSL
-    - fByronSX
-    - fRFU
-    - fUndecoded
-    - fMertik
-    - fADLightwaveRF
-    - fHidekiUPM
-    - fLaCrosse
-    - fFS20
-    - fProGuard
-    - fBlindsT0
-    - fBlindsT1T2T3T4
-    - fX10
-    - fARC
-    - fAC
-    - fHomeEasyEU
-    - fMeiantech
-    - fOregonScientific
-    - fATI
-    - fVisonic
-    - fKeeLoq
-    - fHomeConfort
-    - fRFU2
-    - fRFU3
-    - fRFU4
-    - fRFU5
-    - fRFU6
-    - fRFU7
-    - dummy7
-    - dummy8
-    - dummy9
-enums:
-    eSubtype:
+type: 0x00
+eSubtype:
+    Type: Enum
+    Enum:
         "Interface Control": 0x00
-    eCmnd:
+cSeqnbr: UInt8
+eCmnd:
+    Type: Enum
+    Enum:
         "reset": 0x00
         "status": 0x02
         "setmode": 0x03
         "save": 0x06
         "startreceiver": 0x07
         "quit": 0xff
+dummy1: UInt8
+dummy2: UInt8
+fAEBlyss: Bit
+fRubicson: Bit
+fFineOffsetViking: Bit
+fLighting4: Bit
+fRSL: Bit
+fByronSX: Bit
+fRFU: Bit
+fUndecoded: Bit
+fMertik: Bit
+fADLightwaveRF: Bit
+fHidekiUPM: Bit
+fLaCrosse: Bit
+fFS20: Bit
+fProGuard: Bit
+fBlindsT0: Bit
+fBlindsT1T2T3T4: Bit
+fX10: Bit
+fARC: Bit
+fAC: Bit
+fHomeEasyEU: Bit
+fMeiantech: Bit
+fOregonScientific: Bit
+fATI: Bit
+fVisonic: Bit
+fKeeLoq: Bit
+fHomeConfort: Bit
+fRFU2: Bit
+fRFU3: Bit
+fRFU4: Bit
+fRFU5: Bit
+fRFU6: Bit
+fRFU7: Bit
+dummy7: UInt8
+dummy8: UInt8
+dummy9: UInt8

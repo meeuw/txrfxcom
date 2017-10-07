@@ -1,18 +1,18 @@
-value: 0x51
-fields:
-    - eSubtype
-    - cSeqnbr
-    - sensorId1
-    - sensorId2
-    - humidity
-    - eHumstatus
-    - signalbattery
-enums:
-    eSubtype:
+type: 0x51
+eSubtype:
+    Type: Enum
+    Enum:
         "LaCrosse TX3": 0x01
         "LaCrosse WS2300": 0x02
-    eHumstatus:
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+humidity: UInt8
+eHumstatus:
+    Type: Enum
+    Enum:
         "Dry": 0x00
         "Comfort": 0x01
         "Normal": 0x02
         "Wet": 0x03
+signalbattery: UInt8

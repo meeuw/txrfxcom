@@ -1,19 +1,11 @@
-value: 0x16
-fields:
-    - eSubtype
-    - cSeqnbr
-    - sensorId1
-    - sensorId2
-    - sensorId3
-    - signal
-enums:
-    eSubtype:
-        "Byron SX": 0x00
-        "Byron MP001": 0x01
-        "SelectPlus": 0x02
-        "RFU": 0x03
-        "Envivo": 0x04
-    eSound:
+type: 0x16
+eSubtype: 0x00
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+eSound:
+    Type: Enum
+    Enum:
         "sound 0": 0x00
         "sound 1 SX21 Tubular 3 notes": 0x01
         "sound 2 SX21 Solo (02)": 0x02
@@ -30,3 +22,4 @@ enums:
         "sound 13 SX21 Tubular 3 notes": 0x0D
         "sound 14 SX21 Big Ben": 0x0E
         "sound 15": 0x0F
+signal: UInt8

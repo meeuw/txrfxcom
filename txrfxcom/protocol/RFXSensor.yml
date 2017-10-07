@@ -1,22 +1,13 @@
-value: 0x70
-fields:
-    - eSubtype
-    - cSeqnbr
-    - temperature1
-    - temperature2
-    - signal
-    - dummy1
-enums:
-    eSubtype:
+type: 0x70
+eSubtype:
+    Type: Enum
+    Enum:
         "RFXSensor temperature": 0x00
         "RFXSensor A/S": 0x01
         "RFXSensor voltage": 0x02
         "RFXSensor message": 0x03
-    eMsg:
-        "Sensor addresses incremented": 0x01
-        "Battery low detected": 0x02
-        "No 1-wire device connected": 0x81
-        "1-Wire ROM CRC error": 0x82
-        "1-Wire device connected is not a DS18B20 or DS2438": 0x83
-        "No end of read signal received from 1-Wire device": 0x84
-        "1-Wire scratchpad CRC error": 0x85
+cSeqnbr: UInt8
+temperature1: UInt8
+temperature2: UInt8
+signal: UInt8
+dummy1: UInt8

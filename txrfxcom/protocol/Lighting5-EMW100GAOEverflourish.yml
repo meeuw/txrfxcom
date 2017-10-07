@@ -1,0 +1,15 @@
+type: 0x14
+eSubtype: 0x01
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+sensorId3: UInt8
+unitcode: UInt8
+eCmnd:
+    Type: Enum
+    Enum:
+        "Off": 0x00
+        "On": 0x01
+        "Learn": 0x02
+level: UInt8
+signal: UInt8

@@ -1,20 +1,19 @@
-value: 0x5C
-fields:
-    - eSubtype
-    - cSeqnbr
-    - sensorId1
-    - sensorId2
-    - voltage
-    - current1
-    - current2
-    - power1
-    - power2
-    - cEnergy1
-    - cEnergy2
-    - powerfactor
-    - cFreq
-    - signal
-    - dummy1
-enums:
-    eSubtype:
+type: 0x5C
+eSubtype:
+    Type: Enum
+    Enum:
         "Revolt": 01
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+voltage: UInt8
+current1: UInt8
+current2: UInt8
+power1: UInt8
+power2: UInt8
+cEnergy1: UInt8
+cEnergy2: UInt8
+powerfactor: UInt8
+cFreq: UInt8
+signal: UInt8
+dummy1: UInt8

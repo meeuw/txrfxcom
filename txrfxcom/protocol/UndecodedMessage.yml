@@ -1,6 +1,7 @@
-value: 0x03
-enums:
-    eSubtype:
+type: 0x03
+eSubtype:
+    Type: Enum
+    Enum:
         AC: 0x00
         ARC: 0x01
         ATI: 0x02
@@ -20,7 +21,5 @@ enums:
         Rubicson: 0x10
         AE: 0x11
         Fineoffset: 0x12
-fields:
-    - eSubtype
-    - cSeqnbr
-    - cCmnd
+cSeqnbr: UInt8
+cCmnd: UInt8

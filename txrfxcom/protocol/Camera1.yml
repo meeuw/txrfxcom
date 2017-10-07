@@ -1,10 +1,9 @@
-value: 0x28
-fields:
-    - eSubtype
-    - cSeqnbr
-    - dummy1
-    - dummy2
-    - dummy3
-enums:
-    eSubtype:
+type: 0x28
+eSubtype:
+    Type: Enum
+    Enum:
         "X10 Ninja": 0x00
+cSeqnbr: UInt8
+dummy1: UInt8
+dummy2: UInt8
+dummy3: UInt8

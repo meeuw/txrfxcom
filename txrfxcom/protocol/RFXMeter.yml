@@ -1,16 +1,7 @@
-value: 0x71
-fields:
-    - eSubtype
-    - cSeqnbr
-    - sensorId1
-    - sensorId2
-    - dummy1
-    - dummy2
-    - sensorPower1
-    - sensorPower2
-    - sensorPower3
-enums:
-    eSubtype:
+type: 0x71
+eSubtype:
+    Type: Enum
+    Enum:
         "Normal data packet": 0x00
         "New interval time set": 0x01
         "Calibrate value in <count> in usec": 0x02
@@ -21,3 +12,11 @@ enums:
         "Calibration mode within 5 seconds": 0x0D
         "Set address mode within 5 seconds": 0x0E
         "Identification packet": 0x0F
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+dummy1: UInt8
+dummy2: UInt8
+sensorPower1: UInt8
+sensorPower2: UInt8
+sensorPower3: UInt8

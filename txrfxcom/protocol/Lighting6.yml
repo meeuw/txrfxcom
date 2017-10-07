@@ -1,19 +1,14 @@
-value: 0x15
-fields:
-    - eSubtype
-    - cSeqnbr
-    - sensor1
-    - sensor2
-    - eGroupcode
-    - unitcode
-    - eCmnd
-    - commandSeqnbr
-    - seqNbr2
-    - signal
-enums:
-    eSubtype:
+type: 0x15
+eSubtype:
+    Type: Enum
+    Enum:
         "Blyss": 0x00
-    eGroupcode:
+cSeqnbr: UInt8
+sensor1: UInt8
+sensor2: UInt8
+eGroupcode:
+    Type: Enum
+    Enum:
         "A": 0x41
         "B": 0x42
         "C": 0x43
@@ -22,8 +17,14 @@ enums:
         "F": 0x46
         "G": 0x47
         "H": 0x48
-    eCmnd:
+unitcode: UInt8
+eCmnd:
+    Type: Enum
+    Enum:
         "On": 0x00
         "Off": 0x01
         "group On": 0x02
         "group Off": 0x03
+commandSeqnbr: UInt8
+seqNbr2: UInt8
+signal: UInt8

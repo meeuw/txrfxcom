@@ -1,14 +1,8 @@
-value: 2
-enums:
-    eTransmitterResponse:
-        "ACK, transmit OK": 0x00
-        "ACK, but transmit started after 3 seconds delay anyway with RF receive data": 0x01
-        "NAK, transmitter did not lock on the requested transmit frequency": 0x02
-        "NAK, AC address zero in id1-id4 not allowed": 0x03
-    eSubtype:
+type: 2
+eSubtype:
+    Type: Enum
+    Enum:
         'Error, receiver did not lock': 0
         'Transmitter response': 1
-fields:
-    - eSubtype
-    - cSeqnbr
-    - cCmnd
+cSeqnbr: UInt8
+cCmnd: UInt8

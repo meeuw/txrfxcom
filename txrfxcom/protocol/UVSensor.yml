@@ -1,15 +1,14 @@
-value: 0x57
-fields:
-    - eSubtype
-    - cSeqnbr
-    - sensorId1
-    - sensorId2
-    - uv
-    - dummy1
-    - temperature
-    - signalbattery
-enums:
-    eSubtype:
+type: 0x57
+eSubtype:
+    Type: Enum
+    Enum:
         "UVN128, UV138": 0x01
         "UVN800": 0x02
         "TFA": 0x03
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+uv: UInt8
+dummy1: UInt8
+temperature: UInt8
+signalbattery: UInt8

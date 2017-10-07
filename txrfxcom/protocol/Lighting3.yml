@@ -1,6 +1,29 @@
-value: 0x12
-enums:
-    eCmnd:
+type: 0x12
+cSeqnbr: UInt8
+eSubtype:
+    Type: Enum
+    Enum:
+        "Ikea Koppla": 0x00
+system: UInt8
+fChannel1: Bit
+fChannel2: Bit
+fChannel3: Bit
+fChannel4: Bit
+fChannel5: Bit
+fChannel6: Bit
+fChannel7: Bit
+fChannel8: Bit
+fChannel9: Bit
+fChannel10: Bit
+fChannel11: Bit
+fChannel12: Bit
+fChannel13: Bit
+fChannel14: Bit
+fChannel15: Bit
+fChannel16: Bit
+eCmnd:
+    Type: Enum
+    Enum:
         "Bright": 0x00
         "Dim": 0x08
         "On": 0x10
@@ -15,27 +38,4 @@ enums:
         "Level 9": 0x19
         "Off": 0x1A
         "Program": 0x1C
-    eSubtype:
-        "Ikea Koppla": 0x00
-fields:
-    - cSeqnbr
-    - eSubtype
-    - system
-    - fChannel1
-    - fChannel2
-    - fChannel3
-    - fChannel4
-    - fChannel5
-    - fChannel6
-    - fChannel7
-    - fChannel8
-    - fChannel9
-    - fChannel10
-    - fChannel11
-    - fChannel12
-    - fChannel13
-    - fChannel14
-    - fChannel15
-    - fChannel16
-    - eCmnd
-    - batterysignal
+batterysignal: UInt8

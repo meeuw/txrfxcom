@@ -1,0 +1,7 @@
+type: 0x16
+eSubtype: 0x04
+cSeqnbr: UInt8
+sensorId1: UInt8
+sensorId2: UInt8
+sensorId3: UInt8
+signal: UInt8

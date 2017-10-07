@@ -1,7 +1,6 @@
-value: 0x5F
-fields:
-    - eSubtype
-    - cSeqnbr
-enums:
-    eSubtype:
+type: 0x5F
+eSubtype:
+    Type: Enum
+    Enum:
         "Water usage sensor": 0x01
+cSeqnbr: UInt8
